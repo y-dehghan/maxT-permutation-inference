@@ -3,7 +3,7 @@
 ## Overview
 
 This repository implements a **mass univariate two-sample permutation t-test** with:
-- Welch’s t-statistic (heteroscedasticity-robust)
+- Welch’s t-statistic
 - Max-T family-wise error rate (FWER) correction
 - Phipson–Smyth adjusted permutation $$p$$-values
 - Hedges’ $$g$$ effect size (based on heteroscedastic $$d_{av}$$)
@@ -137,26 +137,9 @@ Additionally, the total number of unique label permutations is printed at runtim
 
 ## Intended Use Cases
 
-### 1. Primary use case: custom feature matrices
+This implementation is suitable for:
 
-This implementation is specifically designed for researchers who extract scalar features
-from signals and require simultaneous two-group testing across all features with FWER control.
-
-Supported feature types include, but are not limited to:
-
-- **Dynamical time-series features**: Higuchi fractal dimension, Lyapunov exponents,
-  approximate entropy, sample entropy, permutation entropy
-- **Spectral features**: absolute or relative band power, spectral edge frequency,
-  peak frequency, spectral entropy
-- **Connectivity measures**: coherence, phase-locking value, or any pairwise scalar summary
-- **Model-derived features**: latent representations, classification scores, regression coefficients
-- **Morphological features**: peak amplitude, latency, area under curve per condition
-
-### 2. General applicability
-
-This implementation is also suitable for:
-
-- EEG / MEG mass univariate analysis across channels or time–frequency bins
+- EEG / MEG mass univariate analysis
 - Neuroimaging ROI-wise testing
 - Multichannel biological signals
 - Any two-group, high-dimensional comparison where FWER control is required
