@@ -12,12 +12,6 @@ This repository implements a **mass univariate two-sample permutation t-test** w
 The implementation is written from scratch using NumPy, SciPy, and Pandas. It accepts **any tabular feature matrix** as input, without relying on any pipeline-specific data structures.
 
 
-## Motivation
-
-Established mass univariate and permutation-based frameworks (MNE-Python, FieldTrip, Nilearn, dmgroppe toolbox, etc.) are typically coupled to proprietary data structures or domain-specific pipelines. Therefore, these frameworks are not suitable for **custom scalar features** extracted from biosignals.
-
-This repository aims to provide a two-group comparison framework that allows for arbitrary tabular input. The sole requirement is that features are organized as a standard CSV file (see **Input Format**). No pipeline integration, toolbox installation, or domain-specific preprocessing is required.
-
 
 ## Statistical Framework
 
